@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Inputs from "./Inputs";
+import { LocationContext } from "./LocationContext";
 
 const Form = () => {
-  const [location, setLocation] = useState({
-    Lattitude: "",
-    Location: "",
-    Longitude: "",
-  });
+  const [location, setLocation] = useContext(LocationContext);
   const handleInputs = (e) => {
     setLocation({
       ...location,
