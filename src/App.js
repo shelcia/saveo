@@ -1,10 +1,20 @@
 import React from "react";
+import Form from "./components/Form";
+import "./styles/style.css";
 
 const App = () => {
   return (
     <React.Fragment>
-      <div>
-        <h1> App </h1>
+      <div className="container-fluid background d-flex justify-content-center align-items-center">
+        <div className="card border border-0">
+          <div className="card-body p-0">
+            <Form />
+            <div className="row border p-0 m-0">
+              <div className="col-sm-5 bg-lightblue p-4">gg</div>
+              <div className="col-sm-7 bg-primary">gg</div>
+            </div>
+          </div>
+        </div>
       </div>
     </React.Fragment>
   );
