@@ -1,6 +1,6 @@
 import React from "react";
 
-const InputGroup = ({ title, handleInputs }) => {
+const InputGroup = ({ title, handleInputs, value }) => {
   return (
     <React.Fragment>
       <div className="col">
@@ -11,6 +11,7 @@ const InputGroup = ({ title, handleInputs }) => {
           placeholder={`${title}`}
           name={title}
           onChange={(e) => handleInputs(e)}
+          value={value}
         />
       </div>
     </React.Fragment>
