@@ -4,12 +4,6 @@ import { Polyline } from "@react-google-maps/api";
 import { LocationContext } from "./LocationContext";
 import { Marker } from "@react-google-maps/api";
 
-// const path = [
-//   { lat: 37.772, lng: -122.214 },
-//   { lat: 21.291, lng: -157.821 },
-//   { lat: -18.142, lng: 178.431 },
-//   { lat: -27.467, lng: 153.027 },
-
 const Map = () => {
   const [path, setPath] = useState([
     { lat: 37.772, lng: -122.214 },
@@ -36,6 +30,7 @@ const Map = () => {
   const containerStyle = {
     width: "100%",
     minHeight: "400px",
+    borderBottomRightRadius: "2rem",
   };
 
   const center = {
@@ -61,7 +56,7 @@ const Map = () => {
     zIndex: 1,
   };
   return (
-    <React.Fragment>
+    <div className="col-sm-6 p-0">
       <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API}>
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
           <Polyline onLoad={onLoad} path={path} options={options} />
@@ -70,7 +65,7 @@ const Map = () => {
           ))}
         </GoogleMap>
       </LoadScript>
-    </React.Fragment>
+    </div>
   );
 };
 

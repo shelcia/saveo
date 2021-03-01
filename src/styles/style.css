@@ -73,4 +73,21 @@ label {
   color: #838a8f;
   cursor: not-allowed;
 }
+
+.card {
+  background-color: transparent !important;
+}
+
+.rounded-top-lg {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.rounded-bottom-left-lg {
+  border-bottom-left-radius: 2rem;
+}
+
+.rounded-bottom-right-lg {
+  border-bottom-right-radius: 2rem;
+}
 /*# sourceMappingURL=style.css.map */

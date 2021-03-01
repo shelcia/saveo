@@ -54,7 +54,7 @@ const Form = () => {
 
   return (
     <React.Fragment>
-      <div className="bg-darkblue  px-2">
+      <div className="bg-darkblue rounded-top-lg px-2">
         <div className="row m-0">
           <div className="col-sm-6 pt-4 pb-5">
             <form>

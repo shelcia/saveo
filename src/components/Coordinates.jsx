@@ -18,7 +18,7 @@ const Coordinates = () => {
 
   return (
     <React.Fragment>
-      <div className="col-sm-6 bg-lightblue p-4 d-flex justify-content-between flex-column">
+      <div className="col-sm-6 bg-lightblue p-4 d-flex justify-content-between flex-column rounded-bottom-left-lg">
         <div>
           <h6 className="font-weight-bold text-uppercase text-darkblue">
             All Co-ordinates:
