@@ -23,4 +23,46 @@
 label {
   color: #a5c0d1;
 }
+
+.button-add {
+  border-radius: 50ex;
+  background-color: #ffffff;
+  color: #074770;
+  padding: 0.65rem 3rem;
+  border: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.button-add:hover {
+  opacity: 0.8;
+}
+
+.button-add.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.button-route {
+  border-radius: 50ex;
+  background-color: #074770;
+  color: #ffffff;
+  padding: 0.65rem 3rem;
+  border: none;
+  font-weight: 700;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.button-route:hover {
+  opacity: 0.8;
+}
+
+.button-route.disabled {
+  background-color: #c6d1d9;
+  color: #838a8f;
+  cursor: not-allowed;
+}
 /*# sourceMappingURL=style.css.map */

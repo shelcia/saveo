@@ -16,7 +16,7 @@ const Form = () => {
             </form>
           </div>
           <div className="col-sm-6 d-flex justify-content-center align-items-center">
-            <button>Sumbit</button>
+            <button className="button-add">Sumbit</button>
           </div>
         </div>
       </div>
