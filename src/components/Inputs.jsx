@@ -4,10 +4,11 @@ const InputGroup = ({ title }) => {
   return (
     <React.Fragment>
       <div className="col">
+        <label>{title}</label>
         <input
           type="text"
           className="form-control"
-          placeholder={`Enter ${title}`}
+          placeholder={`${title}`}
           name={title}
         />
       </div>

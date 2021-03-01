@@ -4,7 +4,7 @@ import Inputs from "./Inputs";
 const Form = () => {
   return (
     <React.Fragment>
-      <div className="bg-darkblue p-4">
+      <div className="bg-darkblue pt-4 pb-5 px-2">
         <div className="row m-0">
           <div className="col-sm-6">
             <form>
