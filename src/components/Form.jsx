@@ -3,12 +3,22 @@ import Inputs from "./Inputs";
 import { LocationContext } from "./LocationContext";
 
 const Form = () => {
-  const [location, setLocation] = useContext(LocationContext);
+  const [location, setLocation] = useState({
+    Lattitude: "",
+    Location: "",
+    Longitude: "",
+  });
   const handleInputs = (e) => {
     setLocation({
       ...location,
       [e.target.name]: e.target.value,
     });
+  };
+  const [locations, setLocations] = useContext(LocationContext);
+
+  const addLocation = (e) => {
+    e.preventDefault();
+    setLocations([...locations, location]);
   };
 
   const [isDisabled, setDisabled] = useState(true);
@@ -43,7 +53,9 @@ const Form = () => {
                 Submit
               </button>
             ) : (
-              <button className="button-add">Add</button>
+              <button className="button-add" onClick={(e) => addLocation(e)}>
+                Add
+              </button>
             )}
           </div>
         </div>

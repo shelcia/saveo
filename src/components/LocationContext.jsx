@@ -3,13 +3,9 @@ import React, { createContext, useState } from "react";
 export const LocationContext = createContext();
 
 export const LocationProvider = ({ children }) => {
-  const [location, setLocation] = useState({
-    Lattitude: "",
-    Location: "",
-    Longitude: "",
-  });
+  const [locations, setLocations] = useState([]);
   return (
-    <LocationContext.Provider value={[location, setLocation]}>
+    <LocationContext.Provider value={[locations, setLocations]}>
       {children}
     </LocationContext.Provider>
   );
