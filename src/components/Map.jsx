@@ -5,23 +5,16 @@ import { LocationContext } from "./LocationContext";
 import { Marker } from "@react-google-maps/api";
 
 const Map = () => {
-  const [path, setPath] = useState([
-    { lat: 37.772, lng: -122.214 },
-    { lat: 21.291, lng: -157.821 },
-    { lat: -18.142, lng: 178.431 },
-    { lat: -27.467, lng: 153.027 },
-  ]);
+  const [path, setPath] = useState([]);
 
   const [locations] = useContext(LocationContext);
 
   useEffect(() => {
     const createPath = () => {
-      console.log(locations);
       const newPath = locations.map((location) => ({
         lat: parseFloat(location.Lattitude),
         lng: parseFloat(location.Longitude),
       }));
-      console.log(newPath);
       setPath(newPath);
     };
     createPath();

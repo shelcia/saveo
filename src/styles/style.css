@@ -3,6 +3,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
+button {
+  outline: none !important;
+}
+
 .background {
   background-color: #72a1bf;
   height: 100vh;
@@ -87,7 +91,23 @@ label {
   border-bottom-left-radius: 2rem;
 }
 
-.rounded-bottom-right-lg {
-  border-bottom-right-radius: 2rem;
+.navbar {
+  background-color: transparent;
+}
+
+.navbar button {
+  background-color: #f2faff;
+  color: #a0a3a5;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.navbar button:hover {
+  opacity: 0.8;
 }
 /*# sourceMappingURL=style.css.map */
