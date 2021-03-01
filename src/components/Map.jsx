@@ -1,24 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import { Polyline } from "@react-google-maps/api";
-import { LocationContext } from "./LocationContext";
 import { Marker } from "@react-google-maps/api";
+import { PathContext } from "./PathContext";
 
 const Map = () => {
-  const [path, setPath] = useState([]);
-
-  const [locations] = useContext(LocationContext);
-
-  useEffect(() => {
-    const createPath = () => {
-      const newPath = locations.map((location) => ({
-        lat: parseFloat(location.Lattitude),
-        lng: parseFloat(location.Longitude),
-      }));
-      setPath(newPath);
-    };
-    createPath();
-  }, [locations]);
+  const [path] = useContext(PathContext);
 
   const containerStyle = {
     width: "100%",

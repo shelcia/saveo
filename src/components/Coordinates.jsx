@@ -1,9 +1,11 @@
 import React, { useContext, useState, useEffect } from "react";
 import { LocationContext } from "./LocationContext";
+import { PathContext } from "./PathContext";
 
 const Coordinates = () => {
   const [locations] = useContext(LocationContext);
   const [isDisabled, setDisabled] = useState(true);
+  const [path, setPath] = useContext(PathContext);
 
   useEffect(() => {
     const handleDisable = () => {
@@ -15,6 +17,16 @@ const Coordinates = () => {
     };
     handleDisable();
   }, [locations]);
+
+  const createPath = (e) => {
+    e.preventDefault();
+    console.log(path);
+    const newPath = locations.map((location) => ({
+      lat: parseFloat(location.Lattitude),
+      lng: parseFloat(location.Longitude),
+    }));
+    setPath(newPath);
+  };
 
   return (
     <React.Fragment>
@@ -52,7 +64,9 @@ const Coordinates = () => {
             Show Route
           </button>
         ) : (
-          <button className="button-route">Show Route</button>
+          <button className="button-route" onClick={(e) => createPath(e)}>
+            Show Route
+          </button>
         )}
       </div>
     </React.Fragment>
