@@ -13,7 +13,7 @@ const App = () => {
             <Form />
             <div className="row border p-0 m-0">
               <Coordinates />
-              <div className="col-sm-6 bg-primary">
+              <div className="col-sm-6 bg-primary p-0">
                 <Map />
               </div>
             </div>
