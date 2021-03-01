@@ -1,5 +1,7 @@
 import React from "react";
+import Coordinates from "./components/Coordinates";
 import Form from "./components/Form";
+import Map from "./components/Map";
 import "./styles/style.css";
 
 const App = () => {
@@ -10,8 +12,10 @@ const App = () => {
           <div className="card-body p-0">
             <Form />
             <div className="row border p-0 m-0">
-              <div className="col-sm-5 bg-lightblue p-4">gg</div>
-              <div className="col-sm-7 bg-primary">gg</div>
+              <Coordinates />
+              <div className="col-sm-6 bg-primary">
+                <Map />
+              </div>
             </div>
           </div>
         </div>

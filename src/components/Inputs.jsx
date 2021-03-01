@@ -1,6 +1,6 @@
 import React from "react";
 
-const InputGroup = ({ title }) => {
+const InputGroup = ({ title, handleInputs }) => {
   return (
     <React.Fragment>
       <div className="col">
@@ -10,6 +10,7 @@ const InputGroup = ({ title }) => {
           className="form-control"
           placeholder={`${title}`}
           name={title}
+          onChange={(e) => handleInputs(e)}
         />
       </div>
     </React.Fragment>

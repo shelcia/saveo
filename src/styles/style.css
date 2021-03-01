@@ -24,6 +24,10 @@ label {
   color: #a5c0d1;
 }
 
+.text-darkblue {
+  color: #123043;
+}
+
 .button-add {
   border-radius: 50ex;
   background-color: #ffffff;
